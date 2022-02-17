@@ -27,7 +27,7 @@ function Posts(props) {
                         variants={postVariant}
                         initial = "initial"
                         animate={{x: '0', opacity: 1}}
-                        transition={{duration: 0.2 + 0.2*index}}
+                        transition={{duration: 0.8, delay: index * 0.2}}
                         whileHover = "whileHover">
                             <h3>{post.title}</h3>
                             <h4>{post.author}</h4>
