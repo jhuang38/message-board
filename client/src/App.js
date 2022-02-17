@@ -35,7 +35,6 @@ function App() {
 
   return (
     <>
-      
       <Header headerText = {"Message Board"}></Header>
       
       <Posts posts = {postList}></Posts>
