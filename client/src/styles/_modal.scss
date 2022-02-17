@@ -1,0 +1,82 @@
+.modalButton {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    font-family: 'Fira Sans';
+    border: 0.15em solid $color-4;
+    padding: 0.5em;
+    font-size: 2em;
+    color: $color-4;
+    border-radius: 1em;
+}
+
+.modal {
+    width: clamp(40vh, 50vh, 60vh);
+    height: clamp(90vh, 50vh, 70vh);
+    margin: 0;
+    box-sizing: border-box;
+    padding: 1em;
+    border-radius: 1em;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-1;
+}
+
+/* form for modal form */
+.modalFormContainer {
+    font-size: 1.2em;
+    font-family: 'Fira Sans';
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $color-4;
+    width: 100%;
+    h1 {
+        font-family: 'Roboto Slab';
+        margin: 0;
+    }
+    .modalForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 1em;
+        width: 80%;
+        padding: 1em;
+        * {
+            font-family: 'Fira Sans';
+        }
+        .inputField {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            input, textarea {
+                padding: 0.75em;
+                border: 0.15em solid $color-4;
+                border-radius: 1em;
+                resize: none;
+            }
+            textarea {
+                height: clamp(10vh, 30vh, 40vh);
+            }
+        }
+        label {
+            font-weight: bold;
+        }
+        button {
+            font-weight: bold;
+            font-size: 1.1em;
+            border: 0.15em solid $color-4;
+            border-radius: 1em;
+            padding: 1em;
+            align-self: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

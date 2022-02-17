@@ -1,6 +1,8 @@
 .header {
     display: flex;
     font-family: 'Roboto Slab';
+    justify-content: center;
+    align-items: center;
     font-size: 1.5em;
     background-color: $color-4;
     box-sizing: border-box;

@@ -1,7 +1,15 @@
+.postBoard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60vh;
+}
 .postList {
     display: flex;
     flex-direction: column;
     list-style-type: none;
+    width: 100%;
     padding: 1em;
     margin: 0;
     gap: 1em;
@@ -28,7 +36,7 @@
     border: 0.15em solid $color-4;
     border-radius: 0.5em;
     padding: 0.5em;
-    max-width: 40%;
+    width: 100%;
     background-color: $color-1;
     color: $color-4;
 }

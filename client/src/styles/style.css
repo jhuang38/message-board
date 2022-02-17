@@ -1,11 +1,18 @@
-/* to use, fonts are 'Fira Sans' and 'Roboto Slab' */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Roboto+Slab&display=swap");
+@import-normalize;
+/* to use, fonts are 'Fira Sans' and 'Roboto Slab' */
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-family: 'Roboto Slab';
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.5em;
   background-color: #112D4E;
   -webkit-box-sizing: border-box;
@@ -19,6 +26,23 @@
   color: #F9F7F7;
 }
 
+.postBoard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60vh;
+}
+
 .postList {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,6 +52,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   list-style-type: none;
+  width: 100%;
   padding: 1em;
   margin: 0;
   gap: 1em;
@@ -57,12 +82,158 @@
   border: 0.15em solid #112D4E;
   border-radius: 0.5em;
   padding: 0.5em;
-  max-width: 40%;
+  width: 100%;
   background-color: #F9F7F7;
   color: #112D4E;
 }
 
-:root {
+.modalButton {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  font-family: 'Fira Sans';
+  border: 0.15em solid #112D4E;
+  padding: 0.5em;
+  font-size: 2em;
+  color: #112D4E;
+  border-radius: 1em;
+}
+
+.modal {
+  width: clamp(40vh, 50vh, 60vh);
+  height: clamp(90vh, 50vh, 70vh);
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1em;
+  border-radius: 1em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F9F7F7;
+}
+
+/* form for modal form */
+.modalFormContainer {
+  font-size: 1.2em;
+  font-family: 'Fira Sans';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #112D4E;
+  width: 100%;
+}
+
+.modalFormContainer h1 {
+  font-family: 'Roboto Slab';
+  margin: 0;
+}
+
+.modalFormContainer .modalForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 1em;
+  width: 80%;
+  padding: 1em;
+}
+
+.modalFormContainer .modalForm * {
+  font-family: 'Fira Sans';
+}
+
+.modalFormContainer .modalForm .inputField {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5em;
+}
+
+.modalFormContainer .modalForm .inputField input, .modalFormContainer .modalForm .inputField textarea {
+  padding: 0.75em;
+  border: 0.15em solid #112D4E;
+  border-radius: 1em;
+  resize: none;
+}
+
+.modalFormContainer .modalForm .inputField textarea {
+  height: clamp(10vh, 30vh, 40vh);
+}
+
+.modalFormContainer .modalForm label {
+  font-weight: bold;
+}
+
+.modalFormContainer .modalForm button {
+  font-weight: bold;
+  font-size: 1.1em;
+  border: 0.15em solid #112D4E;
+  border-radius: 1em;
+  padding: 1em;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000000e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#root {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,6 +244,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -81,7 +255,7 @@
   height: 100%;
 }
 
-:root body {
+body {
   margin: 0;
   width: 100%;
   height: 100%;
