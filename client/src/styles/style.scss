@@ -3,7 +3,7 @@ $color-1: #F9F7F7;
 $color-2: #DBE2EF;
 $color-3: #3F72AF;
 $color-4: #112D4E;
-$gradiant-4-3: linear-gradient(10deg, #112D4E, #3F72AF);
+$gradient: linear-gradient(10deg, $color-1, $color-2);
 
 /* to use, fonts are 'Fira Sans' and 'Roboto Slab' */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
@@ -13,6 +13,7 @@ $gradiant-4-3: linear-gradient(10deg, #112D4E, #3F72AF);
 @import './_posts.scss';
 @import './_modal.scss';
 @import './_backdrop.scss';
+@import './_scrollbar.scss';
 
 #root {
     display: flex;

@@ -233,6 +233,20 @@
           justify-content: center;
 }
 
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: #112D4E;
+  padding: 0.25em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3F72AF;
+  border-radius: 1em;
+}
+
 #root {
   display: -webkit-box;
   display: -ms-flexbox;

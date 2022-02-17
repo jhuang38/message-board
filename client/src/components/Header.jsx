@@ -1,21 +1,10 @@
-import {motion} from 'framer-motion';
-
 function Header(props) {
-    const headerVariant = {
-        initial: {
-            y: '-100vh'
-        },
-        animate: {
-            y: 0
-        }
-    }
+
     return (
     <header className = "header">
-        <motion.h1
-        variants = {headerVariant}
-        initial = 'initial'
-        animate = 'animate'
-        >{props.headerText}</motion.h1>
+        <h1
+
+        >{props.headerText}</h1>
     </header>
     );
 }
