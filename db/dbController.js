@@ -1,7 +1,5 @@
-const mongoose = require('mongoose');
 const Post = require('./postModel');
 const express = require('express');
-require('dotenv').config({path: '../.env'});
 
 // set up express.Router
 const router = express.Router();
