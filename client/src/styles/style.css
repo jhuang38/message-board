@@ -85,6 +85,16 @@
   width: 100%;
   background-color: #F9F7F7;
   color: #112D4E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.postElement .postDate {
+  font-weight: bold;
 }
 
 .modalButton {

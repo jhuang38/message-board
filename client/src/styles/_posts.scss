@@ -39,4 +39,9 @@
     width: 100%;
     background-color: $color-1;
     color: $color-4;
+    display: flex;
+    justify-content: space-between;
+    .postDate {
+        font-weight: bold;
+    }
 }
